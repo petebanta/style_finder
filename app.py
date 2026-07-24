@@ -128,8 +128,8 @@ def main_app():
                 style_number = row.get('Style_Number', 'Unknown Style')
                 
                 if pd.notna(img_id) and img_id:
-                    # Dynamically constructs the Google Drive view link
-                    drive_url = f"https://drive.google.com/uc?export=view&id={img_id}"
+                    # Dynamically constructs the Google Drive view link using the reliable lh3 structure
+                    drive_url = f"https://lh3.googleusercontent.com/d/{img_id}"
                     st.image(drive_url, use_container_width=True)
                     st.markdown(f"**{product_name}**<br>{style_number}", unsafe_allow_html=True)
                 else:
