@@ -70,7 +70,7 @@ def main_app():
     def load_data():
         csv_file = 'style_finder_data.csv'
         if os.path.exists(csv_file):
-            df = pd.read_csv(csv_url, dtype=str)
+            df = pd.read_csv(csv_file, dtype=str)
             if 'Style_Number' in df.columns:
                 df['Style_Number'] = df['Style_Number'].astype(str)
             return df
